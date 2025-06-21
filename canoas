@@ -1,0 +1,81 @@
+	<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Previsão de Inundação - Canoas RS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background: #e0f7fa;
+            color: #004d40;
+        }
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 1rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        section {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #00796b;
+        }
+        .alert {
+            background-color: #ffccbc;
+            border-left: 5px solid #d84315;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #004d40;
+            color: white;
+            margin-top: 2rem;
+        }
+        a {
+            color: #00796b;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Previsão de Inundação - Canoas, RS</h1>
+    </header>
+    <main>
+        <section id="alerts">
+            <h2>Alertas da Defesa Civil</h2>
+            <div class="alert">
+                Situação de emergência decretada devido a alagamentos e chuvas intensas desde 17/06/2025.<br />
+                Mantenha-se informado e siga as orientações da Defesa Civil.
+            </div>
+        </section>
+        <section id="info">
+            <h2>Informações Importantes</h2>
+            <ul>
+                <li>Canoas decretou situação de emergência devido a alagamentos que atingiram cerca de 35% do território, com mais de 100 pessoas desabrigadas e 500 desalojadas (junho/2025).</li>
+                <li>Equipes da Defesa Civil monitoram pontos críticos e atuam com hidrojateamento para desobstrução da rede de drenagem.</li>
+                <li>Áreas mais afetadas: bairros Mathias Velho, Harmonia, Niterói, Olaria, entre outros.</li>
+                <li>Contato da Defesa Civil: telefone <strong>199</strong>.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Fonte: Prefeitura de Canoas e Defesa Civil RS - Atualizado em Junho 2025</p>
+    </footer>
+</body>
+</html>
