@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Os Cavaleiros do Zodíaco - Guia de Personagens</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f4f7f9;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #1a237e;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    nav {
+      background-color: #283593;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 56px; /* altura do header */
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+      padding: 0.5rem 0.8rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #3949ab;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #1a237e;
+      border-bottom: 3px solid #3949ab;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .character {
+      margin-bottom: 1.2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+    .character:last-child {
+      border-bottom: none;
+    }
+    .character h3 {
+      margin: 0 0 0.3rem 0;
+      color: #283593;
+    }
+    .character p {
+      margin: 0.2rem 0;
+      color: #444;
+    }
+    footer {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 600px) {
+      nav {
+        font-size: 0.9rem;
+      }
+      main {
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Os Cavaleiros do Zodíaco</h1>
+  </header>
+
+  <nav>
+    <a href="#seiya">Seiya de Pégaso</a>
+    <a href="#shiryu">Shiryu de Dragão</a>
+    <a href="#hyoga">Hyoga de Cisne</a>
+    <a href="#shun">Shun de Andrômeda</a>
+    <a href="#ikki">Ikki de Fênix</a>
+  </nav>
+
+  <main>
+    <section id="seiya" aria-labelledby="seiya-title">
+      <h2 id="seiya-title">Seiya de Pégaso</h2>
+      <div class="character">
+        <p><strong>Descrição:</strong> Protagonista da série, Seiya é um jovem órfão que se torna o Cavaleiro de Bronze de Pégaso. Determinado e corajoso, luta para proteger a Deusa Atena e seus amigos.</p>
+        <p><strong>Características:</strong> Espírito de luta, lealdade, coragem e perseverança.</p>
+      </div>
+    </section>
+
+    <section id="shiryu" aria-labelledby="shiryu-title">
+      <h2 id="shiryu-title">Shiryu de Dragão</h2>
+      <div class="character">
+        <p><strong>Descrição:</strong> Amigo fiel de Seiya, Shiryu é o Cavaleiro de Bronze de Dragão. Treinou nos Cinco Picos Antigos de Rozan e é conhecido por sua força e sabedoria.</p>
+        <p><strong>Características:</strong> Calmo, sábio, extremamente leal e poderoso.</p>
+      </div>
+    </section>
+
+    <section id="hyoga" aria-labelledby="hyoga-title">
+      <h2 id="hyoga-title">Hyoga de Cisne</h2>
+      <div class="character">
+        <p><strong>Descrição:</strong> Cavaleiro de Bronze de Cisne, Hyoga é frio e determinado. Tem uma ligação forte com sua mãe, que faleceu, e luta com técnicas baseadas no gelo.</p>
+        <p><strong>Características:</strong> Determinação, frieza estratégica e grande poder de gelo.</p>
+      </div>
+    </section>
+
+    <section id="shun" aria-labelledby="shun-title">
+      <h2 id="shun-title">Shun de Andrômeda</h2>
+      <div class="character">
+        <p><strong>Descrição:</strong> Conhecido por sua bondade e compaixão, Shun é o Cavaleiro de Bronze de Andrômeda. Usa correntes como arma e evita violência desnecessária.</p>
+        <p><strong>Características:</strong> Pacifista, sensível, muito protetor com os amigos.</p>
+      </div>
+    </section>
+
+    <section id="ikki" aria-labelledby="ikki-title">
+      <h2 id="ikki-title">Ikki de Fênix</h2>
+      <div class="character">
+        <p><strong>Descrição:</strong> Irmão mais velho de Shun, Ikki é o Cavaleiro de Bronze de Fênix. Forte e solitário, ele retorna das derrotas mais forte, assim como a fênix renasce das cinzas.</p>
+        <p><strong>Características:</strong> Determinação, força implacável e espírito indomável.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Guia não oficial dos Cavaleiros do Zodíaco</p>
+  </footer>
+</body>
+</html>
