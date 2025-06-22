@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Previsão de Inundação - Canoas, RS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      color: #222;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    header {
+      background-color: #00796b;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      margin: 0;
+    }
+    section {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .alert {
+      background-color: #ffccbc;
+      border-left: 6px solid #d84315;
+      padding: 1rem;
+      font-weight: bold;
+      color: #5d2600;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+    }
+    .weather-data p {
+      margin: 0.3rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Previsão de Inundação - Canoas, RS</h1>
+  </header>
+
+  <section id="alert-section">
+    <h2>Alertas da Defesa Civil</h2>
+    <div class="alert" role="alert" aria-live="assertive">
+      Situação de emergência decretada devido a alagamentos e chuvas intensas desde 17/06/2025.<br />
+      Mantenha-se informado e siga as orientações da Defesa Civil.
+    </div>
+  </section>
+
+  <section id="weather-section">
+    <h2>Previsão do Tempo Atual</h2>
+    <div class="weather-data">
+      <p>Carregando dados meteorológicos...</p>
+    </div>
+  </section>
+
+  <section id="info-section">
+    <h2>Informações Importantes</h2>
+    <ul>
+      <li>Canoas decretou situação de emergência devido a alagamentos que atingiram cerca de 35% do território, com mais de 100 pessoas desabrigadas e 500 desalojadas (junho/2025).</li>
+      <li>Equipes da Defesa Civil monitoram pontos críticos e atuam com hidrojateamento para desobstrução da rede de drenagem.</li>
+      <li>Áreas mais afetadas: bairros Mathias Velho, Harmonia, Niterói, Olaria, entre outros.</li>
+      <li>Contato da Defesa Civil: telefone <strong>199</strong>.</li>
+    </ul>
+  </section>
+
+  <script>
+    const apiKey = 'SUA_API_KEY_AQUI'; // Substitua pela sua chave da OpenWeatherMap
+    const city = 'Canoas,BR';
+
+    async function fetchWeather() {
+      const weatherDiv = document.querySelector('.weather-data');
+      try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt_br&units=metric&appid=${apiKey}`);
+        if (!response.ok) {
+          throw new Error('Erro ao buscar dados do tempo');
+        }
+        const data = await response.json();
+
+        weatherDiv.innerHTML = `
+          <p><strong>Condição:</strong> ${data.weather[0].description}</p>
+          <p><strong>Temperatura:</strong> ${data.main.temp.toFixed(1)} °C</p>
+          <p><strong>Umidade:</strong> ${data.main.humidity}%</p>
+          <p><strong>Velocidade do vento:</strong> ${data.wind.speed} m/s</p>
+        `;
+      } catch (error) {
+        weatherDiv.innerHTML = `<p>Não foi possível obter os dados meteorológicos.</p>`;
+        console.error(error);
+      }
+    }
+
+    fetchWeather();
+  </script>
+</body>
+</html>
